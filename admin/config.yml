@@ -1,0 +1,88 @@
+backend:
+  name: github
+  repo: aidog-labs/docs
+  branch: main
+  base_url: https://aidog.xyz
+  auth_endpoint: cms/oauth
+  site_domain: docs.aidog.xyz
+  use_graphql: true
+  squash_merges: true
+
+publish_mode: editorial_workflow
+show_preview_links: false
+
+local_backend: true
+
+site_url: https://docs.aidog.xyz
+display_url: https://docs.aidog.xyz
+logo_url: /favicon.png
+
+media_folder: public/docs-media
+public_folder: /docs-media
+max_file_size: 2048000
+
+collections:
+  - name: site
+    label: Site
+    editor:
+      preview: false
+    files:
+      - label: Homepage
+        name: homepage
+        file: src/content/docs/index.md
+        fields:
+          - label: Template
+            name: template
+            widget: hidden
+            default: splash
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: text
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - label: Tagline
+                name: tagline
+                widget: text
+              - label: Actions
+                name: actions
+                widget: list
+                fields:
+                  - label: Text
+                    name: text
+                    widget: string
+                  - label: Link
+                    name: link
+                    widget: string
+                  - label: Icon
+                    name: icon
+                    widget: string
+                    required: false
+                  - label: Variant
+                    name: variant
+                    widget: string
+                    required: false
+          - label: Body
+            name: body
+            widget: markdown
+      - label: Sidebar
+        name: sidebar
+        file: src/data/sidebar.yaml
+        fields:
+          - label: Sections
+            name: sections
+            widget: list
+            summary: '{{fields.label}} → {{fields.directory}}'
+            min: 1
+            fields:
+              - label: Label
+                name: label
+                widget: string
+              - label: Directory
+                name: directory
+                widget: string
+
