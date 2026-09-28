@@ -119,11 +119,11 @@ The creator’s share is not system revenue. It is compounded back into the same
 <div class="sl-heading-wrapper level-h3"><h3 id="system-revenue-split">System Revenue Split</h3><a class="sl-anchor-link" href="#system-revenue-split"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “System Revenue Split”</span></a></div>
 <p>The following protocol fees become system revenue and then follow the 60 / 20 / 20 split:</p>
 <ul>
+<li>YieldMax’s 5% of earned interest</li>
 <li>StrategyHub’s fixed 5% protocol portion of Carry Fee, charged only on profitable withdrawals</li>
 <li>CycleVault’s 10% of profit, charged only on profitable withdrawals</li>
 <li>Other future protocol fees, unless a specific contract says otherwise</li>
 </ul>
-<p>YieldMax’s 5% interest fee is not included here.</p>
 <p>System revenue is split:</p>
 <ul>
 <li>House Pool=System revenue×60%</li>
@@ -135,8 +135,10 @@ The creator’s share is not system revenue. It is compounded back into the same
 A user earns 100 USDC in interest.</p>
 <ul>
 <li>User keeps 95 USDC</li>
-<li>5 USDC goes 100% to House Pool</li>
-<li>None of this 5 USDC is split into operations or buyback-and-burn</li>
+<li>5 USDC becomes system revenue</li>
+<li>House Pool receives 3 USDC</li>
+<li>Operations receive 1 USDC</li>
+<li>1 USDC is used to buy and burn $AIDOG</li>
 </ul>
 <p>Example 2: StrategyHub
 A user withdraws with 1,000 USDC profit. The strategy’s displayed carry is 15%.</p>
